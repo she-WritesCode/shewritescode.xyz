@@ -1,0 +1,10 @@
+<svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 256 256"
+                    focusable="false"
+                    color="var(--token-2c53595f-e91f-4d4a-91d0-904b1b7f861f, rgb(71, 71, 71)) /* {&quot;name&quot;:&quot;Carbon&quot;} */"
+                    style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: var(--token-2c53595f-e91f-4d4a-91d0-904b1b7f861f, rgb(71, 71, 71)); color: var(--token-2c53595f-e91f-4d4a-91d0-904b1b7f861f, rgb(71, 71, 71)); flex-shrink: 0;">
+                    <g color="var(--token-2c53595f-e91f-4d4a-91d0-904b1b7f861f, rgb(71, 71, 71)) /* {&quot;name&quot;:&quot;Carbon&quot;} */" weight="bold">
+                      <path d="M47.51,112.49a12,12,0,0,1,17-17L116,147V32a12,12,0,0,1,24,0V147l51.51-51.52a12,12,0,0,1,17,17l-72,72a12,12,0,0,1-17,0ZM216,204H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z"></path>
+                    </g>
+                  </svg>

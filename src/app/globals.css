@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Ccircle fill='var(--token-3cbcd694-156f-407b-a77a-fba33cbececa%2C%20rgb(234%2C%20234%2C%20241))%20%2F*%20%7B%22name%22%3A%22Light%20Gray%22%7D%20*%2F' cx='3' cy='3' r='1.5'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  font-size: 18px;
+  @apply text-gray-700;
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.badge {
+  @apply border-2 rounded-2xl px-2 py-2 border-gray-700 text-xl;
+}
+
+.button {
+  @apply text-2xl flex gap-2;
+}
+
+.sticky-note {
+  @apply px-6 py-8 w-40 text-center text-gray-700 min-h-40 flex flex-col items-center justify-center;
+  box-shadow: 0 20px 10px -14px #4031a047;
+  cursor: move;
+}
+.sticky-note.green {
+  background: #b8ffc6;
+}
+.sticky-note.red {
+  background: #ffa3a3;
+}
+.sticky-note.yellow {
+  background: #fbff94;
+}
+.sticky-note.blue {
+  background: #94e6ff;
+}
+.sticky-note.purple {
+  background: #cda3ff;
+}
+.sticky-note.orange {
+  background: #ffe5a3;
+}
+.sticky-note.cooler {
+  background: #faefcc;
+}
