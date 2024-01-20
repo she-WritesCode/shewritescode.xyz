@@ -232,9 +232,9 @@ export default function Home() {
 
         <Section visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 500, }}>
 
-          <div className="flex flex-col gap-12 items-center md:max-w-xl w-full">
+          <div className="flex flex-col gap-12 items-center">
             <SectionHeading title="Contact Me" showLines />
-            <div className="grid md:gap-16 gap-8 w-full ">
+            <div className="grid md:gap-16 gap-8 ">
               <div>
                 <div className="text-3xl text-center mb-4">
                   <Obfuscate
