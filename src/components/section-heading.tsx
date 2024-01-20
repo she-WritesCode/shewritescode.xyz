@@ -22,7 +22,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({ showLines = fals
         md: <h3 className={solway.className + " md:text-3xl text-2xl mb-4 font-semibold"}>{title}</h3>,
         sm: <h4 className={solway.className + " md:text-xl text-lg mb-0 font-semibold"}>{title}</h4>
     }
-    return <div className={showLines ? "flex items-center gap-4" : ""}>
+    return <div className={showLines ? "flex items-center text-center gap-4" : ""}>
         {showLines && <Line />}
         <div>
             {sizeHeading[size]}

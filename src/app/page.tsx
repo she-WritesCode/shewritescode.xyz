@@ -34,6 +34,7 @@ const container = {
     opacity: 1,
     scale: 1,
     transition: {
+      type: "spring",
       delayChildren: 0.3,
       staggerChildren: 0.2
     }
@@ -83,7 +84,7 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 900, }}>
+        <Section visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 200, }}>
           <div className="flex flex-col gap-10 items-center">
 
             <SectionHeading title="About" showLines />
@@ -114,7 +115,7 @@ export default function Home() {
 
               <div className="grid gap-12">
 
-                <div className="text-left">
+                <div className="text-left md:text-center">
                   <SectionHeading title="Links" size="md" />
 
                   <div className="flex flex-wrap gap-4">
@@ -167,11 +168,31 @@ export default function Home() {
                 <div className="">
                   <SectionHeading title="Experience" size="md" />
 
-                  <div className="grid gap-4">
-                    <ExperienceCard company={"Novugrid"} title={"Senior Product Designer"} duration={"2023 - Current"} description={"I developed user-focused delightful digital experiences."} />
+                  <Section visible={container.visible}
+                    hidden={container.hidden} simple className="grid gap-4">
 
-                    <ExperienceCard company={"BorderlessHQ"} title={"Senior Product Designer"} duration={"2021 - 2023"} description={"I developed user-focused delightful digital experiences."} />
-                  </div>
+                    <motion.div variants={item}>
+                      <ExperienceCard
+                        company={"Greater Eredo Investments Ltd · Full-time"}
+                        title={"Co-Founder & CTO"}
+                        duration={"Apr 2023 - Present"}
+                        description={"I drive the strategic and technical direction of our pioneering Agriculture trade centre platform. With a focus on innovation and scalability, AgricTrail aims to transform the agriculture industry through a seamless digital marketplace and food system management."}
+                      /></motion.div>
+                    <motion.div variants={item}>
+                      <ExperienceCard
+                        company={"Novugrid Technologies"}
+                        title={"Software Engineer"}
+                        duration={"Sep 2020 - Present "}
+                        description={"My role encompasses a diverse range of responsibilities. I lead by defining feature requirements, managing the technical team, and overseeing server administration for our website. I've played a pivotal role in building internal systems, including mentoring interns and integrating new team members, fostering a culture of continuous learning and development."}
+                      /></motion.div>
+                    <motion.div variants={item}>
+                      <ExperienceCard
+                        company={"BorderlessHQ"}
+                        title={"Frontend Engineer"}
+                        duration={"Nov 2021 - May 2022"}
+                        description={"I  front-end applications, meeting UI requirements and integrating API endpoints. Created an efficient project structure for the frontend app, optimizing developer experience. Collaborated with cross-functional teams to deliver polished user interfaces. Proactively resolved technical issues and maintained code quality."}
+                      /></motion.div>
+                  </Section>
                 </div>
 
                 <div>
