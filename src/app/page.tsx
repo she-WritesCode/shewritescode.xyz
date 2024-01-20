@@ -3,7 +3,6 @@ import { Gaegu } from "next/font/google";
 import { SectionHeading } from "@/components/section-heading";
 import { Avatar } from "@/components/avatar";
 import Download from '@/icons/download.svg'
-import Haptick from '@/icons/haptick.svg'
 import Instagram from '@/icons/instagram.svg'
 import Linkedin from '@/icons/linkedin.svg'
 import Twitter from '@/icons/twitter.svg'
@@ -13,12 +12,15 @@ import { Badge } from "@/components/badge";
 import { ExperienceCard } from "@/components/experience-card";
 import { SocialLink } from "@/components/social-link";
 import { StickyNote } from "@/components/sticky-note";
-import { Path } from "@/components/path";
 import { ProjectCard } from "@/components/project-card";
 import { NavMenu } from "@/components/nav-menu";
 import { MotionConfig, motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Hapticks } from "@/components/haptick";
+import { Section } from "@/components/section";
+import { ContactFrom } from "@/components/contact-form";
+import Obfuscate from 'react-obfuscate';
+
 
 const gaegu = Gaegu({
   weight: "400", subsets: ['latin']
@@ -55,9 +57,9 @@ export default function Home() {
     <>
       <NavMenu />
       <main className="flex min-h-screen flex-col items-center justify-between px-12">
-        <div className="z-10 max-w-3xl w-full items-center justify-center text-center lg:flex py-48 h-screen">
+        <Section visible={{ opacity: 1, scale: 1, y: 0, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.5, y: 0 }}>
 
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center text-center">
             <SectionHeading title="Hi, I'm Busola Okeowo" subtitle="A FullStack Software Engineer" />
             <MotionConfig transition={{
               stiffness: 260,
@@ -79,17 +81,19 @@ export default function Home() {
                 </motion.div>
               </div></MotionConfig>
           </div>
-        </div>
+        </Section>
 
-        <div className="z-10 max-w-3xl w-full items-center justify-center lg:flex py-24 min-h-screen">
-          <div className="flex flex-col gap-12 items-center">
+        <Section visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 900, }}>
+          <div className="flex flex-col gap-10 items-center">
 
             <SectionHeading title="About" showLines />
             <div className="grid md:grid-cols-2 gap-8">
 
-              <div className="flex flex-col items-center">
-                <Avatar />
-
+              <div className="flex flex-col items-center text-center">
+                <div>
+                  <Avatar />
+                  <div className="mt-4 text-3xl">Busola Okeowo</div>
+                </div>
                 <div className="py-24 w-full grid grid-cols-2 gap-x-6 gap-y-8">
                   <motion.div className="place-self-end" initial={{ y: 20, x: -18 }} animate={{ y: 0, x: 0 }}>
                     <StickyNote>3+ years in Software Engineering</StickyNote>
@@ -109,8 +113,8 @@ export default function Home() {
               </div>
 
               <div className="grid gap-12">
-                <div className="text-left">
 
+                <div className="text-left">
                   <SectionHeading title="Links" size="md" />
 
                   <div className="flex flex-wrap gap-4">
@@ -143,9 +147,8 @@ export default function Home() {
                 <div>
                   <SectionHeading title="Skills" size="md" />
 
-                  <motion.div variants={container}
-                    initial="hidden"
-                    animate="visible" className="flex flex-wrap gap-4">
+                  <Section visible={container.visible}
+                    hidden={container.hidden} simple className="flex flex-wrap gap-4">
 
                     <motion.div variants={item}><Badge>Problem Solving</Badge></motion.div>
 
@@ -158,7 +161,7 @@ export default function Home() {
                     <motion.div variants={item}><Badge>Product Management</Badge></motion.div>
 
                     <motion.div variants={item}><Badge>Wordpress Development</Badge></motion.div>
-                  </motion.div>
+                  </Section>
                 </div>
 
                 <div className="">
@@ -172,18 +175,19 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <a className="button" style={gaegu.style}>
-                    <Download
-                      className='fill-gray-700 w-8 h-8'
-                      focusable="false"
-                    />
-                    <span>Download Resume</span>
-                    <Hapticks
-                      className='fill-gray-700 w-6 h-6'
-                      preserveAspectRatio="xMidYMid slice"
-                      style={{ transform: 'scaleX(-1)' }}
-                    />
-                    {/* <Line /> */}
+                  <a style={gaegu.style}>
+                    <div className="button">
+                      <Download
+                        className='fill-gray-700 w-8 h-8'
+                        focusable="false"
+                      />
+                      <span>Download Resume</span>
+                      <Hapticks
+                        className='fill-gray-700 w-6 h-6'
+                        preserveAspectRatio="xMidYMid slice"
+                        style={{ transform: 'scaleX(-1)' }}
+                      />
+                    </div>
                   </a>
                 </div>
 
@@ -191,8 +195,9 @@ export default function Home() {
             </div>
 
           </div>
-        </div>
-        <div className="z-10 max-w-3xl w-full items-center justify-center lg:flex py-24 min-h-screen relative">
+        </Section>
+
+        {/* <Section visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 500, }}>
 
           <div className="flex flex-col gap-12 items-center w-full">
             <SectionHeading title="Projects" showLines />
@@ -201,7 +206,53 @@ export default function Home() {
               <ProjectCard title={"Senior Product Designer"} duration={"2021 - 2023"} description={"I developed user-focused delightful digital experiences."} />
             </div>
           </div>
-        </div>
+        </Section> */}
+
+        <Section visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 500, }}>
+
+          <div className="flex flex-col gap-12 items-center md:max-w-xl w-full">
+            <SectionHeading title="Contact Me" showLines />
+            <div className="grid md:gap-16 gap-8 w-full ">
+              <div>
+                <div className="text-3xl text-center mb-4">
+                  <Obfuscate
+                    email="hello@shewritescode.xyz"
+                    headers={{
+                      body: 'Hello Busola,\nHow are you doing today? ',
+                    }}
+                  />
+                </div>
+                <div className="flex flex-wrap gap-4 w-full justify-center">
+
+                  <SocialLink href="https://instagram.com/she_writescode">
+                    <Instagram className='fill-gray-700 w-6 h-6' />
+                  </SocialLink>
+
+
+
+                  <SocialLink href="https://linkedin.com/in/she-writescode">
+                    <Linkedin className='fill-gray-700 w-6 h-6' />
+                  </SocialLink>
+
+
+
+                  <SocialLink href="https://github.com/she-writescode">
+                    <Github className='fill-gray-700 w-6 h-6' />
+                  </SocialLink>
+
+
+
+                  <SocialLink href="https://twitter.com/she_writescode">
+                    <Twitter className='fill-gray-700 w-6 h-6' />
+                  </SocialLink>
+
+
+                </div>
+              </div>
+              {/* <ContactFrom /> */}
+            </div>
+          </div>
+        </Section>
       </main>
     </>
   );

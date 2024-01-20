@@ -31,6 +31,10 @@ body {
   }
 }
 
+.section {
+  @apply z-10 max-w-3xl w-full items-center justify-center lg:flex py-24 min-h-screen;
+}
+
 .badge {
   @apply border-2 rounded-2xl px-2 py-2 border-gray-700 text-xl;
 }
@@ -64,4 +68,69 @@ body {
 }
 .sticky-note.cooler {
   background: #faefcc;
+}
+
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+textarea,
+select {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  border-bottom-width: 2px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  @apply rounded-lg border-[2px] border-gray-300;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):focus,
+textarea:focus,
+select:focus {
+  --border-opacity: 1;
+  border-color: #474747;
+  /* border-color: rgba(211, 95, 96, var(--border-opacity)); */
+  outline: 0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+input:not([type="radio"]):not([type="radio"]):not([type="submit"]):active,
+textarea:active,
+select:active {
+  --border-opacity: 1;
+  border-color: #666464;
+  /* border-color: rgba(237, 191, 191, var(--border-opacity)); */
+  outline: 0;
+}
+
+input[type="submit"],
+button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --border-opacity: 1;
+  border-color: #474747;
+  /* border-color: rgba(211, 95, 96, var(--tw-border-opacity)); */
+  --bg-opacity: 1;
+  background-color: #474747;
+  /* background-color: rgba(211, 95, 96, var(--tw-bg-opacity)); */
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  margin-right: 1rem;
+  @apply rounded-lg border-[3px];
+}
+
+input[type="submit"]:hover,
+button:hover {
+  --bg-opacity: 1;
+  background-color: #333;
+  /* background-color: rgba(224, 143, 144, var(--tw-bg-opacity)); */
 }
