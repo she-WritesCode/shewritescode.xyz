@@ -222,7 +222,7 @@ export default function Home() {
         {/* <Section visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 500, }}>
 
           <div className="flex flex-col gap-12 items-center w-full">
-            <SectionHeading title="Projects" showLines />
+            <SectionHeading title="Articles" showLines />
             <div className="grid md:gap-16 gap-8">
               <ProjectCard title={"Senior Product Designer"} duration={"2021 - 2023"} description={"I developed user-focused delightful digital experiences."} />
               <ProjectCard title={"Senior Product Designer"} duration={"2021 - 2023"} description={"I developed user-focused delightful digital experiences."} />
