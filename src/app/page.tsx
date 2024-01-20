@@ -19,6 +19,7 @@ import { useRef } from "react";
 import { Hapticks } from "@/components/haptick";
 import { Section } from "@/components/section";
 import { ContactFrom } from "@/components/contact-form";
+// @ts-ignore
 import Obfuscate from 'react-obfuscate';
 
 
