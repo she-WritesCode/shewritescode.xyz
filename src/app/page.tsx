@@ -74,12 +74,12 @@ export default function Home() {
                   <StickyNote color="blue" rotate={9}>Available for hiring</StickyNote>
                 </motion.div> */}
 
-                <motion.div initial={{ y: 600, x: 180 }} animate={{ y: 0, x: 0 }}>
-                  <StickyNote color="cooler"><div className="text-5xl">👋🏻</div></StickyNote>
-                </motion.div>
-
                 <motion.div className="place-self-end" initial={{ y: 600, x: 55 }} animate={{ y: 0 }}>
                   <StickyNote color="green" rotate={10}>Building <motion.a whileHover={{ scale: 1.1, }} className="underline" target="_blank" href='https://agrictrail.com'>AgricTrail.com</motion.a></StickyNote>
+                </motion.div>
+
+                <motion.div initial={{ y: 600, x: 180 }} animate={{ y: 0, x: 0 }}>
+                  <StickyNote color="cooler"><div className="text-5xl">👋🏻</div></StickyNote>
                 </motion.div>
               </div></MotionConfig>
           </div>
