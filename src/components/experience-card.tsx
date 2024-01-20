@@ -17,7 +17,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ title, company, 
         <SectionHeading title={company} size="sm" />
 
         <div className="" style={gaegu.style}>
-            <div className="font-bold mb-2">{title} <span className="text-gray-500 block md:inline">{duration}</span></div>
+            <div className="font-bold mb-2">{title} · <span className="text-gray-500 block md:inline">{duration}</span></div>
             <p className="text-gray-500">{description}</p>
         </div>
     </div>

@@ -174,7 +174,7 @@ export default function Home() {
 
                     <motion.div variants={item}>
                       <ExperienceCard
-                        company={"Greater Eredo Investments Ltd · Full-time"}
+                        company={"Greater Eredo Investments Ltd"}
                         title={"Co-Founder & CTO"}
                         duration={"Apr 2023 - Present"}
                         description={"I drive the strategic and technical direction of our pioneering Agriculture trade centre platform. With a focus on innovation and scalability, AgricTrail aims to transform the agriculture industry through a seamless digital marketplace and food system management."}
@@ -183,7 +183,7 @@ export default function Home() {
                       <ExperienceCard
                         company={"Novugrid Technologies"}
                         title={"Software Engineer"}
-                        duration={"Sep 2020 - Present "}
+                        duration={"Sep 2020 - Present"}
                         description={"My role encompasses a diverse range of responsibilities. I lead by defining feature requirements, managing the technical team, and overseeing server administration for our website. I've played a pivotal role in building internal systems, including mentoring interns and integrating new team members, fostering a culture of continuous learning and development."}
                       /></motion.div>
                     <motion.div variants={item}>
