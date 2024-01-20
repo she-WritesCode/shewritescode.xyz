@@ -197,7 +197,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <a style={gaegu.style}>
+                  <a target="_blank" href="https://drive.google.com/file/d/1NVWXNvMLj2LQDcleHx3vC8pTIY3vV0hB/view?usp=sharing" style={gaegu.style}>
                     <div className="button">
                       <Download
                         className='fill-gray-700 w-8 h-8'
