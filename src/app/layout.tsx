@@ -18,6 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <title>Busola Okeowo - Full-Stack Software Engineer</title>
       <body className={gaegu.className} >{children}</body>
     </html>
   );

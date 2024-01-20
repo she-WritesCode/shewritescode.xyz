@@ -116,7 +116,7 @@ export default function Home() {
 
               <div className="grid gap-12">
 
-                <div className="text-left md:text-center">
+                <div className="md:text-left">
                   <SectionHeading title="Links" size="md" />
 
                   <div className="flex flex-wrap gap-4">
