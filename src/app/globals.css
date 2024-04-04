@@ -32,7 +32,7 @@ body {
 }
 
 .section {
-  @apply z-10 max-w-3xl w-full items-center justify-center lg:flex py-24 min-h-screen;
+  @apply z-10 max-w-5xl w-full items-center justify-center lg:flex py-24 min-h-screen;
 }
 
 .badge {
@@ -44,7 +44,7 @@ body {
 }
 
 .sticky-note {
-  @apply px-6 py-8 w-48 min-h-48 text-center text-gray-700 flex flex-col items-center justify-center;
+  @apply px-6 py-8 w-40 h-40 md:w-48 md:min-h-48 text-center text-gray-700 flex flex-col items-center justify-center;
   box-shadow: 0 20px 10px -14px #4031a047;
   cursor: move;
 }

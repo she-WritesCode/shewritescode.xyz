@@ -64,9 +64,9 @@ export default function Home() {
 
           <div className="flex flex-col items-center text-center">
             <div className="mb-8">
-              <Avatar />
+              <Avatar src="/busola-2.jpeg" />
             </div>
-            <SectionHeading title="Hi, I'm Busola Okeowo" subtitle="A FullStack Software Engineer" />
+            <SectionHeading title="Hi, I'm Busola Okeowo" subtitle="A Full Stack Software Engineer" />
             <MotionConfig transition={{
               stiffness: 260,
               damping: 20,
@@ -104,12 +104,24 @@ export default function Home() {
                   <Avatar />
                   <div className="mt-4 text-3xl">Busola Okeowo</div>
                 </div>
+                <div>
+                  <p>Busola Okeowo is a seasoned Software Engineer with over 6 years of experience specializing in backend development using Node.js and PHP, and frontend development with Vue.js and React.js. She is also proficient in UI design, utilizing tools like Figma to create stunning user interfaces.
+                  </p>
+                  {/* <p>During her time at Novugrid Technologies, Busola played a key role in developing a business management app that currently supports over 10,000 businesses, facilitating their operations and online sales.
+                  </p>
+                  <p>Outside of her professional endeavors, Busola is deeply involved in her community, serving as a Sunday school teacher in her local church. She is passionate about teaching and empowering young minds to grow strong in their identity in Christ.
+                  </p>
+                  <p>As a Co-founder at Greater Eredo Investments Ltd., Busola is dedicated to empowering smallholder agribusinesses with sustainable solutions. Through her digital agency, Myrtle Technology, she aims to elevate businesses&apos; online presence and provide resources that promote positive values and moral excellence for children.
+                  </p> */}
+                  <p>Busola&apos;s mission is to empower young people to recognize their inherent value and contribute meaningfully to society, both through her work at Greater Eredo Investments Ltd. and Myrtle Technology. Her dedication to technology, education, and community empowerment is evident in all aspects of her professional and personal life.
+                  </p>
+                </div>
                 <div className="py-24 w-full grid grid-cols-2 gap-x-6 gap-y-8">
                   <motion.div className="place-self-end" initial={{ y: 20, x: -18 }} animate={{ y: 0, x: 0 }}>
-                    <StickyNote>3+ years in Software Engineering</StickyNote>
+                    <StickyNote>4+ years in Software Engineering</StickyNote>
                   </motion.div>
                   <div>
-                    <StickyNote color="red" rotate={7}>Over a half-decade of experience on the web</StickyNote></div>
+                    <StickyNote color="red" rotate={7}>6+ years of experience building web solutions</StickyNote></div>
                   <div className="place-self-end">
                     <StickyNote color="orange" rotate={8}>1+ year leading technical teams</StickyNote></div>
                   <div>
@@ -162,9 +174,9 @@ export default function Home() {
 
                     <motion.div variants={item}><Badge>Problem Solving</Badge></motion.div>
 
-                    <motion.div variants={item}><Badge>Frontend</Badge></motion.div>
+                    <motion.div variants={item}><Badge>Frontend (Vue.js, React.Js)</Badge></motion.div>
 
-                    <motion.div variants={item}><Badge>Backend</Badge></motion.div>
+                    <motion.div variants={item}><Badge>Backend (Node.js, PHP)</Badge></motion.div>
 
                     <motion.div variants={item}><Badge>Product Design</Badge></motion.div>
 
@@ -189,7 +201,7 @@ export default function Home() {
                       /></motion.div>
                     <motion.div variants={item}>
                       <ExperienceCard
-                        company={"Novugrid Technologies"}
+                        company={"Noja Technologies"}
                         title={"Software Engineer"}
                         duration={"Sept 2020 - March 2024"}
                         description={"My role encompasses a diverse range of responsibilities. I lead by defining feature requirements, managing the technical team, and overseeing server administration for our website. I've played a pivotal role in building internal systems, including mentoring interns and integrating new team members, fostering a culture of continuous learning and development."}

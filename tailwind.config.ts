@@ -15,6 +15,10 @@ const config: Config = {
       },
     },
   },
+  safelist: [
+    { pattern: new RegExp("w-[.*px]") },
+    { pattern: new RegExp("h-[.*px]") },
+  ],
   plugins: [],
 };
 export default config;
