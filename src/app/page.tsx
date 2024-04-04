@@ -59,9 +59,13 @@ export default function Home() {
     <>
       <NavMenu />
       <main className="flex min-h-screen flex-col items-center justify-between px-12">
+
         <Section visible={{ opacity: 1, scale: 1, y: 0, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.5, y: 0 }}>
 
           <div className="flex flex-col items-center text-center">
+            <div className="mb-8">
+              <Avatar />
+            </div>
             <SectionHeading title="Hi, I'm Busola Okeowo" subtitle="A FullStack Software Engineer" />
             <MotionConfig transition={{
               stiffness: 260,
@@ -71,21 +75,25 @@ export default function Home() {
             }}>
               <div className="py-24 w-full grid grid-cols-2 gap-x-4 gap-y-8">
                 <motion.div className="place-self-end" initial={{ y: 600, x: -180 }} animate={{ y: 0, x: 0 }}>
-                  <StickyNote color="blue" rotate={9}>Problem solver</StickyNote>
+                  <StickyNote color="purple" rotate={9}>Elevating Businesses&apos; Online Presence with <motion.a whileHover={{ scale: 1.1, }} className="underline" target="_blank" href='https://myrtletechnology.com'>myrtletechnology.com</motion.a></StickyNote>
                 </motion.div>
 
                 <motion.div initial={{ y: 600, x: 180 }} animate={{ y: 0, x: 0 }}>
                   <StickyNote color="cooler"><div className="text-5xl">👋🏻</div></StickyNote>
                 </motion.div>
 
-                <motion.div className="place-self-end" initial={{ y: 600, x: 55 }} animate={{ y: 0 }}>
-                  <StickyNote color="green" rotate={10}>Building <motion.a whileHover={{ scale: 1.1, }} className="underline" target="_blank" href='https://agrictrail.com'>AgricTrail.com</motion.a></StickyNote>
+                <motion.div className="place-self-end" initial={{ y: 600, x: -30 }} animate={{ y: 0, x: 0 }}>
+                  <StickyNote color="red" rotate={-9}>Passionate Educator and Mentor</StickyNote>
+                </motion.div>
+
+                <motion.div className="place-self-end" initial={{ y: 600, x: 60 }} animate={{ y: 0, x: -10 }}>
+                  <StickyNote color="green" rotate={10}>Empowering Smallholder Agribusinesses with <motion.a whileHover={{ scale: 1.1, }} className="underline" target="_blank" href='https://agrictrail.com'>AgricTrail.com</motion.a></StickyNote>
                 </motion.div>
               </div></MotionConfig>
           </div>
         </Section>
 
-        <Section visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 200, }}>
+        <Section id="about" visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 200, }}>
           <div className="flex flex-col gap-10 items-center">
 
             <SectionHeading title="About" showLines />
@@ -183,15 +191,22 @@ export default function Home() {
                       <ExperienceCard
                         company={"Novugrid Technologies"}
                         title={"Software Engineer"}
-                        duration={"Sep 2020 - Present"}
+                        duration={"Sept 2020 - March 2024"}
                         description={"My role encompasses a diverse range of responsibilities. I lead by defining feature requirements, managing the technical team, and overseeing server administration for our website. I've played a pivotal role in building internal systems, including mentoring interns and integrating new team members, fostering a culture of continuous learning and development."}
+                      /></motion.div>
+                    <motion.div variants={item}>
+                      <ExperienceCard
+                        company={"Golemon"}
+                        title={"Software Engineer"}
+                        duration={"April 2023 - June 2023"}
+                        description={"I helped build backend infrastructure for managing operations within the Golemon such as the inventory management system, and order fulfillment system"}
                       /></motion.div>
                     <motion.div variants={item}>
                       <ExperienceCard
                         company={"BorderlessHQ"}
                         title={"Frontend Engineer"}
                         duration={"Nov 2021 - May 2022"}
-                        description={"I  front-end applications, meeting UI requirements and integrating API endpoints. Created an efficient project structure for the frontend app, optimizing developer experience. Collaborated with cross-functional teams to deliver polished user interfaces. Proactively resolved technical issues and maintained code quality."}
+                        description={"I devloped front-end applications, meeting UI requirements and integrating API endpoints. Created an efficient project structure for the frontend app, optimizing developer experience. Collaborated with cross-functional teams to deliver polished user interfaces. Proactively resolved technical issues and maintained code quality."}
                       /></motion.div>
                   </Section>
                 </div>
@@ -230,7 +245,7 @@ export default function Home() {
           </div>
         </Section> */}
 
-        <Section visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 500, }}>
+        <Section id="contact" visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 500, }}>
 
           <div className="flex flex-col gap-12 items-center">
             <SectionHeading title="Contact Me" showLines />

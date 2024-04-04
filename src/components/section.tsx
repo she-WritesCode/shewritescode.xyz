@@ -7,6 +7,7 @@ import { ReactNode, SVGProps, useEffect, useRef } from "react";
 // };
 
 export interface SectionProps {
+    id?: string;
     children?: ReactNode;
     visible: Variant;
     hidden: Variant;
@@ -14,7 +15,7 @@ export interface SectionProps {
     className?: string;
 }
 
-export const Section: React.FC<SectionProps> = ({ children, visible, hidden, simple = false, className }) => {
+export const Section: React.FC<SectionProps> = ({ id, children, visible, hidden, simple = false, className }) => {
     const controls = useAnimation();
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true });
@@ -26,6 +27,7 @@ export const Section: React.FC<SectionProps> = ({ children, visible, hidden, sim
 
     return (
         <motion.div
+            id={id}
             ref={ref}
             animate={controls}
             initial="hidden"
