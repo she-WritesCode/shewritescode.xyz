@@ -1,7 +1,6 @@
 'use client';
 import { Gaegu } from "next/font/google";
 import { SectionHeading } from "@/components/section-heading";
-import { Avatar } from "@/components/avatar";
 import Download from '@/icons/download.svg'
 import Instagram from '@/icons/instagram.svg'
 import Linkedin from '@/icons/linkedin.svg'
@@ -12,9 +11,8 @@ import { Badge } from "@/components/badge";
 import { SocialLink } from "@/components/social-link";
 import { StickyNote } from "@/components/sticky-note";
 import { NavMenu } from "@/components/nav-menu";
-import { MotionConfig, motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Hapticks } from "@/components/haptick";
 import { Section } from "@/components/section";
 import { PortfolioItem } from "@/components/portfolio-item";
 // @ts-ignore
