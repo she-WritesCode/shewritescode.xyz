@@ -19,6 +19,7 @@ import { Section } from "@/components/section";
 import { PortfolioItem } from "@/components/portfolio-item";
 // @ts-ignore
 import Obfuscate from 'react-obfuscate';
+import { HeroMagazine } from '@/components/hero-magazine';
 
 const gaegu = Gaegu({
   weight: "400", subsets: ['latin']
@@ -55,62 +56,7 @@ export default function Home() {
       <main className="flex min-h-screen flex-col items-center justify-between px-12 pb-24">
 
         {/* HERO */}
-        <Section visible={{ opacity: 1, scale: 1, y: 0, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.5, y: 0 }}>
-          <div className="flex flex-col items-center text-center">
-            <div className="mb-4">
-              <Avatar src="/busola-2.jpeg" />
-            </div>
-            <SectionHeading title="Busola Okeowo" subtitle="Full Stack Engineer · Lagos, Nigeria" />
-
-            <div className="text-xl text-gray-700 mt-8">
-              <p>
-                I build the infrastructure behind products people rely on
-              </p>
-            </div>
-
-            <MotionConfig transition={{
-              stiffness: 260,
-              damping: 20,
-              duration: 1,
-              delay: 0.05,
-            }}>
-              <div className="py-24 w-full grid grid-cols-2 gap-x-4 gap-y-12">
-
-
-                <motion.div className="md:place-self-center mt-12" initial={{ y: 600, x: 0 }} animate={{ y: 0, x: 0 }}>
-                  <StickyNote color="blue" rotate={3} className="!w-full">
-                    <div className="font-bold text-lg">Senior Backend Engineer<br />@ Alajo Technologies 💼</div>
-                  </StickyNote>
-                </motion.div>
-
-                <motion.div className="md:place-self-start" initial={{ y: 600, x: 180 }} animate={{ y: 0, x: 0 }}>
-                  <StickyNote color="purple" rotate={-8} className="!w-full" >
-                    <div className="font-bold text-lg">Ex-CTO · 2× founder</div>
-                  </StickyNote>
-                </motion.div>
-
-                <motion.div className="md:place-self-end mr-8" initial={{ y: 600, x: -100 }} animate={{ y: 0, x: 0 }}>
-                  <StickyNote color="green" rotate={6} className="!w-full" >
-                    <div className="font-bold text-lg">6+ years shipping 🚀</div>
-                  </StickyNote>
-                </motion.div>
-
-                <motion.div className="md:place-self-center col-span-2 lg:col-span-1" initial={{ y: 600, x: 0 }} animate={{ y: 0, x: 0 }}>
-                  <StickyNote color="yellow" rotate={-2} className="!w-full" >
-                    <div className="font-bold text-lg">Educator & mentor in tech 🌍</div>
-                  </StickyNote>
-                </motion.div>
-              </div>
-            </MotionConfig>
-
-            <div className="mt-8 mb-16">
-              <a href="#work" className="text-gray-500 hover:text-black transition-colors font-bold text-lg">
-                ↓ see the work ↓
-              </a>
-            </div>
-          </div>
-        </Section>
-
+        <HeroMagazine />
 
         {/* SELECTED WORK */}
         <Section id="work" visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 200, }}>
@@ -278,50 +224,53 @@ export default function Home() {
         <Section id="about" visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 200, }}>
           <div className="flex flex-col gap-10 items-center w-full max-w-4xl mx-auto">
             <div className="text-center mb-4">
-              <div className="text-xl text-gray-500 font-mono mb-2">about <br /> 02</div>
               <SectionHeading title="About" showLines />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
-              <div className="flex flex-col gap-6 items-center md:items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 w-full">
+              <div className="lg:col-span-5 flex flex-col items-center lg:items-start h-full">
                 <StickyNote rotate={3} className="!w-fit !p-2 !pb-8 bg-white shadow-xl flex flex-col items-center">
-                  <Avatar src="/busola-2.jpeg" className="rounded-none border-0" width={240} height={240} />
+                  <img src="/about.jpg" alt="Busola Okeowo" className="object-cover w-full  aspect-[4/5] lg:aspect-[4/8]" style={{ objectPosition: 'top' }} />
                   <div className="mt-4 font-bold text-gray-700 text-lg uppercase tracking-wide font-mono">Hi, I'm Busola</div>
-                </StickyNote>
-
-                <StickyNote color="blue" rotate={-1} className="!w-full mt-4">
-                  <p className="text-lg">I'm a Full Stack Engineer who's spent most of my career close to the product — not just writing code, but understanding why it matters. I've been a CTO twice, a co-founder once, and an engineer at every stage in between.</p>
-                </StickyNote>
-
-                <StickyNote color="yellow" rotate={2} className="!w-full">
-                  <p className="text-lg">I specialise in backend systems: the kind that handle money, manage access, and have to work correctly every single time. When I'm not building, I'm teaching.</p>
                 </StickyNote>
               </div>
 
-              <div className="flex flex-col gap-8">
-                <div className="pl-4 border-l-4 border-black">
-                  <div className="font-bold text-gray-600 uppercase text-sm mb-1">experience</div>
-                  <div className="text-xl font-bold">6+ years building web solutions</div>
+              <div className="lg:col-span-7 flex flex-col gap-10">
+                <div className="flex flex-col gap-6">
+                  <StickyNote color="blue" rotate={-1} className="!w-full">
+                    <p className="text-lg">I'm a Full Stack Engineer who's spent most of my career close to the product — not just writing code, but understanding why it matters. I've been a CTO twice, a co-founder once, and an engineer at every stage in between.</p>
+                  </StickyNote>
+
+                  <StickyNote color="yellow" rotate={2} className="!w-full">
+                    <p className="text-lg">I specialise in backend systems: the kind that handle money, manage access, and have to work correctly every single time. When I'm not building, I'm teaching.</p>
+                  </StickyNote>
                 </div>
-                <div className="pl-4 border-l-4 border-black">
-                  <div className="font-bold text-gray-600 uppercase text-sm mb-1">leadership</div>
-                  <div className="text-xl font-bold">2× CTO, 1× Co-Founder</div>
-                </div>
-                <div className="pl-4 border-l-4 border-black">
-                  <div className="font-bold text-gray-600 uppercase text-sm mb-1">currently at</div>
-                  <div className="text-xl font-bold">Alajo Technologies</div>
-                </div>
-                <div className="pl-4 border-l-4 border-black">
-                  <div className="font-bold text-gray-600 uppercase text-sm mb-1">based in</div>
-                  <div className="text-xl font-bold">Lagos, Nigeria 🇳🇬</div>
-                </div>
-                <div className="pl-4 border-l-4 border-black">
-                  <div className="font-bold text-gray-600 uppercase text-sm mb-1">education</div>
-                  <div className="text-xl font-bold">BSc. Industrial Mathematics — UNILAG</div>
-                </div>
-                <div className="pl-4 border-l-4 border-black">
-                  <div className="font-bold text-gray-600 uppercase text-sm mb-1">also loves</div>
-                  <div className="text-xl font-bold">Teaching web development 🏫</div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="pl-4 border-l-4 border-black">
+                    <div className="font-bold text-gray-600 uppercase text-sm mb-1">experience</div>
+                    <div className="text-xl font-bold">6+ years building web solutions</div>
+                  </div>
+                  <div className="pl-4 border-l-4 border-black">
+                    <div className="font-bold text-gray-600 uppercase text-sm mb-1">leadership</div>
+                    <div className="text-xl font-bold">2× CTO, 1× Co-Founder</div>
+                  </div>
+                  <div className="pl-4 border-l-4 border-black">
+                    <div className="font-bold text-gray-600 uppercase text-sm mb-1">currently at</div>
+                    <div className="text-xl font-bold">Alajo Technologies</div>
+                  </div>
+                  <div className="pl-4 border-l-4 border-black">
+                    <div className="font-bold text-gray-600 uppercase text-sm mb-1">based in</div>
+                    <div className="text-xl font-bold">Lagos, Nigeria 🇳🇬</div>
+                  </div>
+                  <div className="pl-4 border-l-4 border-black">
+                    <div className="font-bold text-gray-600 uppercase text-sm mb-1">education</div>
+                    <div className="text-xl font-bold">BSc. Industrial Mathematics — UNILAG</div>
+                  </div>
+                  <div className="pl-4 border-l-4 border-black">
+                    <div className="font-bold text-gray-600 uppercase text-sm mb-1">also loves</div>
+                    <div className="text-xl font-bold">Teaching web development 🏫</div>
+                  </div>
                 </div>
 
                 <StickyNote color="yellow" rotate={-2} className="!w-full mt-4">
