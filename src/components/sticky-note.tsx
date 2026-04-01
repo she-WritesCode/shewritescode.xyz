@@ -13,12 +13,23 @@ export interface StickyNoteProps {
     rotate?: number
     className?: string
     textAlign?: 'left' | 'center' | 'right';
+    constraintsRef?: React.RefObject<HTMLDivElement | null>;
 }
 
-export const StickyNote: React.FC<StickyNoteProps> = ({ children, color = 'green', rotate = -7, className, textAlign = 'center' }) => {
+export const StickyNote: React.FC<StickyNoteProps> = ({ 
+    children, 
+    color = 'green', 
+    rotate = -7, 
+    className, 
+    textAlign = 'center',
+    constraintsRef 
+}) => {
 
     return <motion.div
         drag
+        dragConstraints={constraintsRef}
+        dragElastic={0.1}
+        dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
         className={gaegu.className + " sticky-note z-50 " + color + " " + className}
         style={{ rotate, textAlign, alignItems: textAlign === 'left' ? 'start' : textAlign === 'right' ? 'end' : 'center' }}
     >

@@ -20,9 +20,9 @@ export function HeroMagazine() {
           />
           {/* Real photo (visible by default, hides on hover) */}
           <img
-            src="/hero.jpg"
+            src="/hero_clay.jpeg"
             alt="Busola Real Photo"
-            className="absolute bottom-0 w-[95%] rounded mix-blend-multiply drop-shadow-md transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] opacity-100 group-hover:opacity-0 group-hover:scale-95 group-hover:translate-y-8 z-10"
+            className="absolute bottom-0 w-full rounded mix-blend-multiply drop-shadow-md transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] opacity-100 group-hover:opacity-0 group-hover:scale-95 group-hover:translate-y-8 z-10"
           />
 
           {/* Little hint indicator */}
@@ -34,11 +34,11 @@ export function HeroMagazine() {
         <div className="absolute bottom-0 md:bottom-10 z-20 text-center w-full bg-white/70 backdrop-blur-xl py-6 border-y border-gray-200">
           <h2 className={`text-6xl md:text-8xl font-bold tracking-tighter ${gaegu.className}`}>Busola Okeowo</h2>
           <div className="flex flex-wrap justify-center gap-4 md:gap-8 mt-2 font-mono font-bold uppercase text-xs md:text-sm tracking-widest text-gray-500">
-            <span>Backend Dev</span>
+            <span>Backend Engineer</span>
             <span className="hidden md:inline">•</span>
-            <span>Ex-CTO</span>
+            <span>Frontend Engineer</span>
             <span className="hidden md:inline">•</span>
-            <span>Educator</span>
+            <span>Mentor</span>
           </div>
         </div>
       </div>

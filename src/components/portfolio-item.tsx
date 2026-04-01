@@ -40,6 +40,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
   impact,
   stack,
 }) => {
+  const constraintsRef = React.useRef(null);
   const heading = (
     <SectionHeading
       size="md"
@@ -50,7 +51,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
   );
 
   return (
-    <div>
+    <div ref={constraintsRef}>
       {link ? (
         <a href={link} target="_blank">
           {heading}
@@ -73,7 +74,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
             initial={{ y: 600, x: 180 }}
             animate={{ y: 0, x: 0 }}
           >
-            <StickyNote textAlign="left" color={problem.color} rotate={problem.rotate} className="!w-full">
+            <StickyNote textAlign="left" color={problem.color} rotate={problem.rotate} className="!w-full" constraintsRef={constraintsRef}>
               <h4 className="font-bold mb-2 text-2xl">{problem.title || "The problem"}</h4>
               <div className="text-lg">{problem.text}</div>
             </StickyNote>
@@ -84,7 +85,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
             initial={{ y: 600, x: -100 }}
             animate={{ y: 0, x: 0 }}
           >
-            <StickyNote textAlign="left" color={built.color} rotate={built.rotate} className="!w-full !h-full">
+            <StickyNote textAlign="left" color={built.color} rotate={built.rotate} className="!w-full !h-full" constraintsRef={constraintsRef}>
               <h4 className="font-bold mb-2 text-2xl">{built.title || "What I built"}</h4>
               <div className="text-lg">{built.text}</div>
             </StickyNote>
@@ -95,7 +96,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = ({
             initial={{ y: 600, x: 0 }}
             animate={{ y: 0, x: 0 }}
           >
-            <StickyNote textAlign="left" color={impact.color} rotate={impact.rotate} className="!w-full">
+            <StickyNote textAlign="left" color={impact.color} rotate={impact.rotate} className="!w-full" constraintsRef={constraintsRef}>
               <div className="font-bold text-2xl mb-1">{impact.title}</div>
               <div className="text-lg">{impact.text}</div>
             </StickyNote>
