@@ -1,5 +1,6 @@
 import { Section } from "@/components/section";
 import { Gaegu } from "next/font/google";
+import Image from "next/image";
 
 const gaegu = Gaegu({ weight: "700", subsets: ['latin'] });
 
@@ -13,13 +14,13 @@ export function HeroMagazine() {
 
         <div className="relative z-10 w-[280px] md:w-[450px] aspect-square flex items-end justify-center group cursor-pointer">
           {/*  Sketch(hidden by default, shows on hover) */}
-          <img
+          <Image
             src="/hero_lines.png"
             alt="Busola Sketch"
             className="absolute bottom-0 w-full rounded shadow-2xl transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] opacity-0 group-hover:opacity-100 group-hover:-translate-y-4 z-20"
           />
           {/* Real photo (visible by default, hides on hover) */}
-          <img
+          <Image
             src="/hero_clay.jpeg"
             alt="Busola Real Photo"
             className="absolute bottom-0 w-full rounded mix-blend-multiply drop-shadow-md transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] opacity-100 group-hover:opacity-0 group-hover:scale-95 group-hover:translate-y-8 z-10"

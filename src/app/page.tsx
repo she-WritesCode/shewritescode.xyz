@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { Gaegu } from "next/font/google";
 import { SectionHeading } from "@/components/section-heading";
 import Download from '@/icons/download.svg'
@@ -68,27 +69,27 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 w-full px-4">
               <StickyNote color="blue" rotate={-2} className="!w-full h-full flex flex-col justify-start" constraintsRef={reasonsRef}>
                 <div className="text-5xl font-bold font-mono text-white -mt-2 -ml-2 mb-2">01</div>
-                <h3 className="text-2xl font-bold mb-3">I Care About the "Why"</h3>
-                <p className="text-lg">I'm not here just to take instructions and disappear. I actually care about whether the code I write makes sense for your business. If a feature feels like it’s being built for the wrong reasons, I’ll tell you. I’m here to build things that matter.</p>
+                <h3 className="text-2xl font-bold mb-3">I Care About the &quot;Why&quot;</h3>
+                <p className="text-lg">I&apos;m not here just to take instructions and disappear. I actually care about whether the code I write makes sense for your business. If a feature feels like it’s being built for the wrong reasons, I’ll tell you. I’m here to build things that matter.</p>
               </StickyNote>
 
               <StickyNote color="green" rotate={3} className="!w-full h-full flex flex-col justify-start" constraintsRef={reasonsRef}>
                 <div className="text-5xl font-bold font-mono text-white -mt-2 -ml-2 mb-2">02</div>
                 <h3 className="text-2xl font-bold mb-3">The Quality Gatekeeper</h3>
-                <p className="text-lg">I bring a level of seriousness and 'detailedness' across Android, Web, and Backend. I act as an uncompromising gatekeeper, ensuring that nothing 'shabby' ever leaves our gate. I ensure every layer is polished to a high technical standard.</p>
+                <p className="text-lg">I bring a level of seriousness and &apos;detailedness&apos; across Android, Web, and Backend. I act as an uncompromising gatekeeper, ensuring that nothing &apos;shabby&apos; ever leaves our gate. I ensure every layer is polished to a high technical standard.</p>
               </StickyNote>
 
               <StickyNote color="yellow" rotate={-1} className="!w-full h-full flex flex-col justify-start" constraintsRef={reasonsRef}>
                 <div className="text-5xl font-bold font-mono text-white -mt-2 -ml-2 mb-2">03</div>
                 <h3 className="text-2xl font-bold mb-3">Architectural Elegance</h3>
-                <p className="text-lg">I don't just solve problems; I build systems with distinct coding patterns and a highly technical style. My goal is to write code that is so elegant and clear that anyone who looks at it today (or years later) will value its clarity.</p>
+                <p className="text-lg">I don&apos;t just solve problems; I build systems with distinct coding patterns and a highly technical style. My goal is to write code that is so elegant and clear that anyone who looks at it today (or years later) will value its clarity.</p>
               </StickyNote>
 
               <div className="md:col-span-2 lg:col-span-2 lg:col-start-1 flex justify-end lg:justify-center w-full">
                 <StickyNote color="purple" rotate={2} className="!w-full sm:w-2/3 lg:w-3/4 h-full flex flex-col justify-start" constraintsRef={reasonsRef}>
                   <div className="text-5xl font-bold font-mono text-white -mt-2 -ml-2 mb-2">04</div>
                   <h3 className="text-2xl font-bold mb-3">Unwavering Presence</h3>
-                  <p className="text-lg">My determination and attention to detail define the pulse of every team I join. I don’t just contribute to standups; I help drive the momentum. It’s hard to imagine the project moving forward without the presence and focus I bring to every task.</p>
+                  <p className="text-lg">My determination and attention to detail define the pulse of every team I join. I don’t just contribute to standups; I help drive the momentum. It&apos;s hard to imagine the project moving forward without the presence and focus I bring to every task.</p>
                 </StickyNote>
               </div>
 
@@ -275,9 +276,9 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 w-full">
               <div className="lg:col-span-5 flex flex-col items-center lg:items-start h-full gap-8">
                 <StickyNote rotate={3} className="!w-fit !p-2 !pb-8 bg-white shadow-xl flex flex-col items-center" constraintsRef={aboutRef}>
-                  <img src="/about.jpg" alt="Busola Okeowo" className="object-cover w-full  aspect-[4/5] lg:aspect-[4/8]" style={{ objectPosition: 'top' }} />
+                  <Image src="/about.jpg" alt="Busola Okeowo" width={600} height={800} className="object-cover w-full aspect-[4/5] lg:aspect-[4/8]" style={{ objectPosition: 'top' }} />
                   <div className="mt-4 font-bold text-gray-700 text-lg uppercase tracking-wide font-mono flex items-center gap-2">
-                    Hi, I'm Busola
+                    Hi, I&apos;m Busola
                   </div>
                   <div className="text-gray-500 font-mono text-sm flex items-center gap-1 mt-1">
                     <Location className="w-4 h-4 stroke-gray-500 stroke-[5px]" /> Lagos, Nigeria
@@ -353,7 +354,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-4 items-stretch">
               {/* Testimonial 1 - Feranmi */}
               <div className="bg-white border-4 border-black rounded-[20px] p-8 shadow-[6px_6px_0px_#3b82f6] flex flex-col justify-between hover:-translate-y-1 transition-transform">
-                <p className="text-lg font-bold font-mono text-gray-800 mb-6">"It’s been amazing seeing your work, your determination, and your attention to detail. You’ve been such a presence that it’s hard to imagine our team standups without you."</p>
+                <p className="text-lg font-bold font-mono text-gray-800 mb-6">&quot;It’s been amazing seeing your work, your determination, and your attention to detail. You’ve been such a presence that it’s hard to imagine our team standups without you.&quot;</p>
                 <div className="text-left w-full mt-auto">
                   <div className="font-bold text-black uppercase tracking-widest text-xs">— Feranmi</div>
                   <div className="text-gray-600 text-xs mt-1 uppercase font-mono tracking-tighter">Software Engineer</div>
@@ -362,7 +363,7 @@ export default function Home() {
 
               {/* Testimonial 2 - Lekan */}
               <div className="bg-white border-4 border-black rounded-[20px] p-8 shadow-[6px_6px_0px_#10b981] flex flex-col justify-between hover:-translate-y-1 transition-transform">
-                <p className="text-lg font-bold font-mono text-gray-800 mb-6">"Your work on our codebase was truly impressive, showing distinct coding patterns and a highly technical style. Anyone who looks at our code today would comment on its elegance."</p>
+                <p className="text-lg font-bold font-mono text-gray-800 mb-6">&quot;Your work on our codebase was truly impressive, showing distinct coding patterns and a highly technical style. Anyone who looks at our code today would comment on its elegance.&quot;</p>
                 <div className="text-left w-full mt-auto">
                   <div className="font-bold text-black uppercase tracking-widest text-xs">— Lekan</div>
                   <div className="text-gray-600 text-xs mt-1 uppercase font-mono tracking-tighter">CTO, SaaS Product</div>
@@ -371,7 +372,7 @@ export default function Home() {
 
               {/* Testimonial 3 - Fortune */}
               <div className="bg-white border-4 border-black rounded-[20px] p-8 shadow-[6px_6px_0px_#facc15] flex flex-col justify-between hover:-translate-y-1 transition-transform">
-                <p className="text-lg font-bold font-mono text-gray-800 mb-6">"You brought a level of seriousness and 'detailedness' to the entire team—across Android, web, and backend. You acted as a vital gatekeeper, ensuring that nothing 'shabby' was ever released."</p>
+                <p className="text-lg font-bold font-mono text-gray-800 mb-6">&quot;You brought a level of seriousness and &apos;detailedness&apos; to the entire team—across Android, web, and backend. You acted as a vital gatekeeper, ensuring that nothing &apos;shabby&apos; was ever released.&quot;</p>
                 <div className="text-left w-full mt-auto">
                   <div className="font-bold text-black uppercase tracking-widest text-xs">— Fortune</div>
                   <div className="text-gray-600 text-xs mt-1 uppercase font-mono tracking-tighter">Software Engineer / Colleague</div>
@@ -380,7 +381,7 @@ export default function Home() {
 
               {/* Testimonial 4 - Emmanuel (Spanning check for balance) */}
               <div className="bg-white border-4 border-black rounded-[20px] p-8 shadow-[6px_6px_0px_#f43f5e] flex flex-col justify-between hover:-translate-y-1 transition-transform">
-                <p className="text-lg font-bold font-mono text-gray-800 mb-6">"I am truly grateful for the way you helped me throughout my own journey. You have always been there to provide support and guidance over the years."</p>
+                <p className="text-lg font-bold font-mono text-gray-800 mb-6">&quot;I am truly grateful for the way you helped me throughout my own journey. You have always been there to provide support and guidance over the years.&quot;</p>
                 <div className="text-left w-full mt-auto">
                   <div className="font-bold text-black uppercase tracking-widest text-xs">— Emmanuel</div>
                   <div className="text-gray-600 text-xs mt-1 uppercase font-mono tracking-tighter">Colleague / Mentee</div>
@@ -389,7 +390,7 @@ export default function Home() {
 
               {/* Testimonial 5 - Dapo */}
               <div className="bg-white border-4 border-black rounded-[20px] p-8 shadow-[6px_6px_0px_#f97316] flex flex-col justify-between hover:-translate-y-1 transition-transform">
-                <p className="text-lg font-bold font-mono text-gray-800 mb-6">"I really enjoyed learning from you. Out of all the colleagues I have worked with, your departure is the most deeply felt."</p>
+                <p className="text-lg font-bold font-mono text-gray-800 mb-6">&quot;I really enjoyed learning from you. Out of all the colleagues I have worked with, your departure is the most deeply felt.&quot;</p>
                 <div className="text-left w-full mt-auto">
                   <div className="font-bold text-black uppercase tracking-widest text-xs">— Dapo</div>
                   <div className="text-gray-600 text-xs mt-1 uppercase font-mono tracking-tighter">Software Engineer / Colleague</div>
@@ -406,7 +407,7 @@ export default function Home() {
               <SectionHeading title="Let's talk" showLines />
             </div>
 
-            <p className="text-2xl font-bold">Want to work together or just talk shop? I'm easy to reach.</p>
+            <p className="text-2xl font-bold">Want to work together or just talk shop? I&apos;m easy to reach.</p>
 
             <div className="flex flex-col md:flex-row flex-wrap justify-center items-stretch gap-8 lg:gap-12 mt-12 w-full px-4 text-center">
 
