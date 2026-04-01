@@ -19,8 +19,7 @@ import { useRef } from "react";
 import { Hapticks } from "@/components/haptick";
 import { Section } from "@/components/section";
 import { ContactFrom } from "@/components/contact-form";
-// @ts-ignore
-import Obfuscate from 'react-obfuscate';
+import { Obfuscate } from '@/components/obfuscate';
 
 
 const gaegu = Gaegu({
@@ -40,7 +39,7 @@ const container = {
       staggerChildren: 0.2
     }
   }
-}
+} as const;
 
 const item = {
   hidden: { y: 20, opacity: 0 },
@@ -48,7 +47,7 @@ const item = {
     y: 0,
     opacity: 1
   }
-}
+} as const;
 
 export default function Home() {
 
