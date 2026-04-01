@@ -17,12 +17,16 @@ export function HeroMagazine() {
           <Image
             src="/hero_lines.png"
             alt="Busola Sketch"
+            width={500}
+            height={500}
             className="absolute bottom-0 w-full rounded shadow-2xl transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] opacity-0 group-hover:opacity-100 group-hover:-translate-y-4 z-20"
           />
           {/* Real photo (visible by default, hides on hover) */}
           <Image
             src="/hero_clay.jpeg"
             alt="Busola Real Photo"
+            width={500}
+            height={500}
             className="absolute bottom-0 w-full rounded mix-blend-multiply drop-shadow-md transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] opacity-100 group-hover:opacity-0 group-hover:scale-95 group-hover:translate-y-8 z-10"
           />
 

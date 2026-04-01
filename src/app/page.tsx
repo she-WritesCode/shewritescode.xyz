@@ -299,11 +299,11 @@ export default function Home() {
               <div className="lg:col-span-7 flex flex-col gap-10">
                 <div className="flex flex-col gap-6">
                   <StickyNote color="blue" rotate={-1} className="!w-full" constraintsRef={aboutRef}>
-                    <p className="text-lg">I'm a Full Stack Engineer who's spent most of my career close to the product — not just writing code, but understanding why it matters. I've been a CTO twice, a co-founder once, and an engineer at every stage in between.</p>
+                    <p className="text-lg">I&apos;m a Full Stack Engineer who&apos;s spent most of my career close to the product — not just writing code, but understanding why it matters. I&apos;ve been a CTO twice, a co-founder once, and an engineer at every stage in between.</p>
                   </StickyNote>
 
                   <StickyNote color="yellow" rotate={2} className="!w-full" constraintsRef={aboutRef}>
-                    <p className="text-lg">I specialise in backend systems: the kind that handle money, manage access, and have to work correctly every single time. When I'm not building, I'm teaching.</p>
+                    <p className="text-lg">I specialise in backend systems: the kind that handle money, manage access, and have to work correctly every single time. When I&apos;m not building, I&apos;m teaching.</p>
                   </StickyNote>
                 </div>
 
