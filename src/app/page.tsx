@@ -20,6 +20,7 @@ import { Section } from "@/components/section";
 import { PortfolioItem } from "@/components/portfolio-item";
 import { Obfuscate } from '@/components/obfuscate';
 import { HeroMagazine } from '@/components/hero-magazine';
+import { DragToggle } from "@/components/drag-toggle";
 
 const gaegu = Gaegu({
   weight: "400", subsets: ['latin']
@@ -53,7 +54,8 @@ export default function Home() {
   return (
     <>
       <NavMenu />
-      <main className="flex min-h-screen flex-col items-center justify-between px-12 pb-24">
+      <main className="flex min-h-screen flex-col items-center justify-between px-4 md:px-12 pb-24">
+        <DragToggle />
 
         {/* HERO */}
         <HeroMagazine />

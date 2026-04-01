@@ -2,6 +2,7 @@
 import { Gaegu } from "next/font/google";
 import { ReactNode } from "react";
 import { motion } from 'framer-motion'
+import { useUI } from "@/providers/ui-provider";
 
 const gaegu = Gaegu({
     weight: "400", subsets: ['latin']
@@ -24,13 +25,14 @@ export const StickyNote: React.FC<StickyNoteProps> = ({
     textAlign = 'center',
     constraintsRef 
 }) => {
+    const { isDraggable } = useUI();
 
     return <motion.div
-        drag
+        drag={isDraggable}
         dragConstraints={constraintsRef}
         dragElastic={0.1}
         dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
-        className={gaegu.className + " sticky-note z-50 " + color + " " + className}
+        className={gaegu.className + " sticky-note z-50 " + color + " " + className + (isDraggable ? " cursor-grab active:cursor-grabbing" : " !cursor-default")}
         style={{ rotate, textAlign, alignItems: textAlign === 'left' ? 'start' : textAlign === 'right' ? 'end' : 'center' }}
     >
         {children}
