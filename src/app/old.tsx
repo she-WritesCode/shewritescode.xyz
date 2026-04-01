@@ -52,7 +52,7 @@ const item = {
 
 export default function Home() {
 
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null!)
   const isInView = useInView(ref)
 
   return (

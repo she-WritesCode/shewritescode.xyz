@@ -17,7 +17,7 @@ export interface SectionProps {
 
 export const Section: React.FC<SectionProps> = ({ id, children, visible, hidden, simple = false, className }) => {
     const controls = useAnimation();
-    const ref = useRef(null)
+    const ref = useRef<HTMLDivElement>(null!)
     const isInView = useInView(ref, { once: true });
     useEffect(() => {
         if (isInView) {

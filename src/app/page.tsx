@@ -48,8 +48,8 @@ const item = {
 }
 
 export default function Home() {
-  const reasonsRef = useRef(null);
-  const aboutRef = useRef(null);
+  const reasonsRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
 
   return (
     <>
