@@ -47,8 +47,8 @@ const item = {
 }
 
 export default function Home() {
-    const reasonsRef = useRef(null);
-    const aboutRef = useRef(null);
+  const reasonsRef = useRef(null);
+  const aboutRef = useRef(null);
 
   return (
     <>
@@ -59,48 +59,48 @@ export default function Home() {
         <HeroMagazine />
 
         {/* 5 REASONS TO HIRE ME */}
-                <Section id="reasons" visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 200, }}>
-                    <div ref={reasonsRef} className="flex flex-col gap-10 items-center w-full max-w-5xl mx-auto my-24">
-                        <div className="text-center mb-12">
-                            <SectionHeading title="5 Reasons to Work With Me" showLines />
-                        </div>
+        <Section id="reasons" visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 200, }}>
+          <div ref={reasonsRef} className="flex flex-col gap-10 items-center w-full max-w-5xl mx-auto my-24">
+            <div className="text-center mb-12">
+              <SectionHeading title="5 Reasons to Work With Me" showLines />
+            </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 w-full px-4">
-                            <StickyNote color="blue" rotate={-2} className="!w-full h-full flex flex-col justify-start" constraintsRef={reasonsRef}>
-                                <div className="text-5xl font-bold font-mono text-gray-300 -mt-2 -ml-2 mb-2">01</div>
-                                <h3 className="text-2xl font-bold mb-3">I Care About the "Why"</h3>
-                                <p className="text-lg">I'm not here just to take instructions and disappear. I actually care about whether the code I write makes sense for your business. If a feature feels like it’s being built for the wrong reasons, I’ll tell you. I’m here to build things that matter.</p>
-                            </StickyNote>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 w-full px-4">
+              <StickyNote color="blue" rotate={-2} className="!w-full h-full flex flex-col justify-start" constraintsRef={reasonsRef}>
+                <div className="text-5xl font-bold font-mono text-white -mt-2 -ml-2 mb-2">01</div>
+                <h3 className="text-2xl font-bold mb-3">I Care About the "Why"</h3>
+                <p className="text-lg">I'm not here just to take instructions and disappear. I actually care about whether the code I write makes sense for your business. If a feature feels like it’s being built for the wrong reasons, I’ll tell you. I’m here to build things that matter.</p>
+              </StickyNote>
 
-                            <StickyNote color="green" rotate={3} className="!w-full h-full flex flex-col justify-start" constraintsRef={reasonsRef}>
-                                <div className="text-5xl font-bold font-mono text-gray-300 -mt-2 -ml-2 mb-2">02</div>
-                                <h3 className="text-2xl font-bold mb-3">Patient with Complexity</h3>
-                                <p className="text-lg">I’m the person who stays with a problem long after the easy answers have run out. I build the event-driven systems that handle real money—the kind that requires a lot of patience and zero room for error. I enjoy the deep focus it takes to get those high-stakes engines right.</p>
-                            </StickyNote>
+              <StickyNote color="green" rotate={3} className="!w-full h-full flex flex-col justify-start" constraintsRef={reasonsRef}>
+                <div className="text-5xl font-bold font-mono text-white -mt-2 -ml-2 mb-2">02</div>
+                <h3 className="text-2xl font-bold mb-3">The Quality Gatekeeper</h3>
+                <p className="text-lg">I bring a level of seriousness and 'detailedness' across Android, Web, and Backend. I act as an uncompromising gatekeeper, ensuring that nothing 'shabby' ever leaves our gate. I ensure every layer is polished to a high technical standard.</p>
+              </StickyNote>
 
-                            <StickyNote color="yellow" rotate={-1} className="!w-full h-full flex flex-col justify-start" constraintsRef={reasonsRef}>
-                                <div className="text-5xl font-bold font-mono text-gray-300 -mt-2 -ml-2 mb-2">03</div>
-                                <h3 className="text-2xl font-bold mb-3">Speed with Integrity</h3>
-                                <p className="text-lg">I love the 0→1 phase. I can take a rough concept and have it live and scaling in weeks. But I’m also honest about the compromises; I move fast, but I know exactly which shortcuts we can live with and which ones will hurt the product later.</p>
-                            </StickyNote>
+              <StickyNote color="yellow" rotate={-1} className="!w-full h-full flex flex-col justify-start" constraintsRef={reasonsRef}>
+                <div className="text-5xl font-bold font-mono text-white -mt-2 -ml-2 mb-2">03</div>
+                <h3 className="text-2xl font-bold mb-3">Architectural Elegance</h3>
+                <p className="text-lg">I don't just solve problems; I build systems with distinct coding patterns and a highly technical style. My goal is to write code that is so elegant and clear that anyone who looks at it today (or years later) will value its clarity.</p>
+              </StickyNote>
 
-                            <div className="md:col-span-2 lg:col-span-2 lg:col-start-1 flex justify-end lg:justify-center w-full">
-                                <StickyNote color="purple" rotate={2} className="!w-full sm:w-2/3 lg:w-3/4 h-full flex flex-col justify-start" constraintsRef={reasonsRef}>
-                                    <div className="text-5xl font-bold font-mono text-gray-300 -mt-2 -ml-2 mb-2">04</div>
-                                    <h3 className="text-2xl font-bold mb-3">Complete Accountability</h3>
-                                    <p className="text-lg">I look at the whole story, not just the front end. Whether it’s a slow database index, a broken CI/CD pipeline, or a janky UI transition—if I see it, I fix it. I don’t believe in 'not my job.' I own the feature from top to bottom.</p>
-                                </StickyNote>
-                            </div>
+              <div className="md:col-span-2 lg:col-span-2 lg:col-start-1 flex justify-end lg:justify-center w-full">
+                <StickyNote color="purple" rotate={2} className="!w-full sm:w-2/3 lg:w-3/4 h-full flex flex-col justify-start" constraintsRef={reasonsRef}>
+                  <div className="text-5xl font-bold font-mono text-white -mt-2 -ml-2 mb-2">04</div>
+                  <h3 className="text-2xl font-bold mb-3">Unwavering Presence</h3>
+                  <p className="text-lg">My determination and attention to detail define the pulse of every team I join. I don’t just contribute to standups; I help drive the momentum. It’s hard to imagine the project moving forward without the presence and focus I bring to every task.</p>
+                </StickyNote>
+              </div>
 
-                            <div className="md:col-span-2 lg:col-span-1 flex justify-start w-full">
-                                <StickyNote color="orange" rotate={-3} className="!w-full h-full flex flex-col justify-start" constraintsRef={reasonsRef}>
-                                    <div className="text-5xl font-bold font-mono text-gray-300 -mt-2 -ml-2 mb-2">05</div>
-                                    <h3 className="text-2xl font-bold mb-3">Bringing Out the Best</h3>
-                                    <p className="text-lg">I’m a force multiplier. I’ve spent years leading teams as a CTO, and I believe my real job is to bring out the best in the people I work with. I often see the greatness in my team members before they even see it in themselves.</p>
-                                </StickyNote>
-                            </div>
-                        </div>
-                    </div>
+              <div className="md:col-span-2 lg:col-span-1 flex justify-start w-full">
+                <StickyNote color="orange" rotate={-3} className="!w-full h-full flex flex-col justify-start" constraintsRef={reasonsRef}>
+                  <div className="text-5xl font-bold font-mono text-white -mt-2 -ml-2 mb-2">05</div>
+                  <h3 className="text-2xl font-bold mb-3">A True Force Multiplier</h3>
+                  <p className="text-lg">I invest deeply in my colleagues and mentees. By providing the support and guidance others need to succeed, I leave a lasting impact on the team culture. I am a presence that is deeply felt because I bring out the best in the people around me.</p>
+                </StickyNote>
+              </div>
+            </div>
+          </div>
         </Section>
 
         {/* SELECTED WORK */}
@@ -266,115 +266,133 @@ export default function Home() {
         </Section>
 
         {/* ABOUT */}
-                <Section id="about" visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 200, }}>
-                    <div ref={aboutRef} className="flex flex-col gap-10 items-center w-full max-w-4xl mx-auto">
-                        <div className="text-center mb-4">
-                            <SectionHeading title="About" showLines />
-                        </div>
+        <Section id="about" visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 200, }}>
+          <div ref={aboutRef} className="flex flex-col gap-10 items-center w-full max-w-4xl mx-auto">
+            <div className="text-center mb-4">
+              <SectionHeading title="About" showLines />
+            </div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 w-full">
-                            <div className="lg:col-span-5 flex flex-col items-center lg:items-start h-full gap-8">
-                                <StickyNote rotate={3} className="!w-fit !p-2 !pb-8 bg-white shadow-xl flex flex-col items-center" constraintsRef={aboutRef}>
-                                    <img src="/about.jpg" alt="Busola Okeowo" className="object-cover w-full  aspect-[4/5] lg:aspect-[4/8]" style={{ objectPosition: 'top' }} />
-                                    <div className="mt-4 font-bold text-gray-700 text-lg uppercase tracking-wide font-mono flex items-center gap-2">
-                                        Hi, I'm Busola
-                                    </div>
-                                    <div className="text-gray-500 font-mono text-sm flex items-center gap-1 mt-1">
-                                        <Location className="w-4 h-4 stroke-gray-500 stroke-[5px]" /> Lagos, Nigeria
-                                    </div>
-                                </StickyNote>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 w-full">
+              <div className="lg:col-span-5 flex flex-col items-center lg:items-start h-full gap-8">
+                <StickyNote rotate={3} className="!w-fit !p-2 !pb-8 bg-white shadow-xl flex flex-col items-center" constraintsRef={aboutRef}>
+                  <img src="/about.jpg" alt="Busola Okeowo" className="object-cover w-full  aspect-[4/5] lg:aspect-[4/8]" style={{ objectPosition: 'top' }} />
+                  <div className="mt-4 font-bold text-gray-700 text-lg uppercase tracking-wide font-mono flex items-center gap-2">
+                    Hi, I'm Busola
+                  </div>
+                  <div className="text-gray-500 font-mono text-sm flex items-center gap-1 mt-1">
+                    <Location className="w-4 h-4 stroke-gray-500 stroke-[5px]" /> Lagos, Nigeria
+                  </div>
+                </StickyNote>
 
-                                <div className="flex flex-col items-center lg:items-start gap-6 w-full md:px-4 lg:px-0">
+                <div className="flex flex-col items-center lg:items-start gap-6 w-full md:px-4 lg:px-0">
 
 
-                                    {/* Download Resume Button */}
-                                    <a href="/Busola-Okeowo-Resume-March-2026.pdf" target="_blank" rel="noreferrer" className="flex items-center gap-3 border-2 border-black px-8 py-4 rounded-xl font-bold font-mono tracking-widest hover:scale-105 hover:bg-black hover:text-white transition-all shadow-[6px_6px_0px_#facc15] w-full justify-center">
-                                        <Download className="w-5 h-5 stroke-white stroke-[4px]" />
-                                        <span>DOWNLOAD RESUME</span>
-                                    </a>
-                                </div>
-                            </div>
+                  {/* Download Resume Button */}
+                  <a href="/Busola-Okeowo-Resume-March-2026.pdf" target="_blank" rel="noreferrer" className="flex items-center gap-3 border-2 border-black px-8 py-4 rounded-xl font-bold font-mono tracking-widest hover:scale-105 hover:bg-black hover:text-white transition-all shadow-[6px_6px_0px_#facc15] w-full justify-center">
+                    <Download className="w-5 h-5 stroke-white stroke-[4px]" />
+                    <span>DOWNLOAD RESUME</span>
+                  </a>
+                </div>
+              </div>
 
-                            <div className="lg:col-span-7 flex flex-col gap-10">
-                                <div className="flex flex-col gap-6">
-                                    <StickyNote color="blue" rotate={-1} className="!w-full" constraintsRef={aboutRef}>
-                                        <p className="text-lg">I'm a Full Stack Engineer who's spent most of my career close to the product — not just writing code, but understanding why it matters. I've been a CTO twice, a co-founder once, and an engineer at every stage in between.</p>
-                                    </StickyNote>
+              <div className="lg:col-span-7 flex flex-col gap-10">
+                <div className="flex flex-col gap-6">
+                  <StickyNote color="blue" rotate={-1} className="!w-full" constraintsRef={aboutRef}>
+                    <p className="text-lg">I'm a Full Stack Engineer who's spent most of my career close to the product — not just writing code, but understanding why it matters. I've been a CTO twice, a co-founder once, and an engineer at every stage in between.</p>
+                  </StickyNote>
 
-                                    <StickyNote color="yellow" rotate={2} className="!w-full" constraintsRef={aboutRef}>
-                                        <p className="text-lg">I specialise in backend systems: the kind that handle money, manage access, and have to work correctly every single time. When I'm not building, I'm teaching.</p>
-                                    </StickyNote>
-                                </div>
+                  <StickyNote color="yellow" rotate={2} className="!w-full" constraintsRef={aboutRef}>
+                    <p className="text-lg">I specialise in backend systems: the kind that handle money, manage access, and have to work correctly every single time. When I'm not building, I'm teaching.</p>
+                  </StickyNote>
+                </div>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                                    <div className="pl-4 border-l-4 border-black">
-                                        <div className="font-bold text-gray-600 uppercase text-sm mb-1">experience</div>
-                                        <div className="text-xl font-bold">6+ years building web solutions</div>
-                                    </div>
-                                    <div className="pl-4 border-l-4 border-black">
-                                        <div className="font-bold text-gray-600 uppercase text-sm mb-1">leadership</div>
-                                        <div className="text-xl font-bold">2× CTO, 1× Co-Founder</div>
-                                    </div>
-                                    <div className="pl-4 border-l-4 border-black">
-                                        <div className="font-bold text-gray-600 uppercase text-sm mb-1">currently at</div>
-                                        <div className="text-xl font-bold">Alajo Technologies</div>
-                                    </div>
-                                    <div className="pl-4 border-l-4 border-black">
-                                        <div className="font-bold text-gray-600 uppercase text-sm mb-1">based in</div>
-                                        <div className="text-xl font-bold">Lagos, Nigeria 🇳🇬</div>
-                                    </div>
-                                    <div className="pl-4 border-l-4 border-black">
-                                        <div className="font-bold text-gray-600 uppercase text-sm mb-1">education</div>
-                                        <div className="text-xl font-bold">BSc. Industrial Mathematics — UNILAG</div>
-                                    </div>
-                                    <div className="pl-4 border-l-4 border-black">
-                                        <div className="font-bold text-gray-600 uppercase text-sm mb-1">also loves</div>
-                                        <div className="text-xl font-bold">Teaching web development 🏫</div>
-                                    </div>
-                                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="pl-4 border-l-4 border-black">
+                    <div className="font-bold text-gray-600 uppercase text-sm mb-1">experience</div>
+                    <div className="text-xl font-bold">6+ years building web solutions</div>
+                  </div>
+                  <div className="pl-4 border-l-4 border-black">
+                    <div className="font-bold text-gray-600 uppercase text-sm mb-1">leadership</div>
+                    <div className="text-xl font-bold">2× CTO, 1× Co-Founder</div>
+                  </div>
+                  <div className="pl-4 border-l-4 border-black">
+                    <div className="font-bold text-gray-600 uppercase text-sm mb-1">currently at</div>
+                    <div className="text-xl font-bold">Alajo Technologies</div>
+                  </div>
+                  <div className="pl-4 border-l-4 border-black">
+                    <div className="font-bold text-gray-600 uppercase text-sm mb-1">based in</div>
+                    <div className="text-xl font-bold">Lagos, Nigeria 🇳🇬</div>
+                  </div>
+                  <div className="pl-4 border-l-4 border-black">
+                    <div className="font-bold text-gray-600 uppercase text-sm mb-1">education</div>
+                    <div className="text-xl font-bold">BSc. Industrial Mathematics — UNILAG</div>
+                  </div>
+                  <div className="pl-4 border-l-4 border-black">
+                    <div className="font-bold text-gray-600 uppercase text-sm mb-1">also loves</div>
+                    <div className="text-xl font-bold">Teaching web development 🏫</div>
+                  </div>
+                </div>
 
-                                <StickyNote color="yellow" rotate={-2} className="!w-full mt-4" constraintsRef={aboutRef}>
-                                    <div className="text-3xl mb-2">🏆</div>
-                                    <div className="font-bold text-lg">Microsoft Leap Hackathon — Winner, 2019</div>
-                                    <p>Built a market access tool for farmers</p>
-                                </StickyNote>
-                            </div>
-                        </div>
+                <StickyNote color="yellow" rotate={-2} className="!w-full mt-4" constraintsRef={aboutRef}>
+                  <div className="text-3xl mb-2">🏆</div>
+                  <div className="font-bold text-lg">Microsoft Leap Hackathon — Winner, 2019</div>
+                  <p>Built a market access tool for farmers</p>
+                </StickyNote>
+              </div>
+            </div>
 
-                    </div>
-                </Section>
+          </div>
+        </Section>
 
         <Section id="testimonials" visible={{ opacity: 1, y: 0, scale: 1, transition: { duration: 0.5 } }} hidden={{ opacity: 0, scale: 0.7, y: 200, }}>
-          <div className="flex flex-col gap-10 items-center w-full max-w-5xl mx-auto my-24">
+          <div className="flex flex-col gap-10 items-center w-full max-w-6xl mx-auto my-24">
             <div className="text-center mb-8">
-              <SectionHeading title="What People Say" showLines />
+              <SectionHeading title="What Colleagues Say" showLines />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-4 items-stretch">
-              {/* Testimonial 1 */}
+              {/* Testimonial 1 - Feranmi */}
               <div className="bg-white border-4 border-black rounded-[20px] p-8 shadow-[6px_6px_0px_#3b82f6] flex flex-col justify-between hover:-translate-y-1 transition-transform">
-                <p className="text-lg font-bold font-mono text-gray-800 mb-6">"Busola didn’t just ship the code; she challenged our 'why' until the product actually made sense. She’s the rare engineer who cares about the business as much as the syntax."</p>
+                <p className="text-lg font-bold font-mono text-gray-800 mb-6">"It’s been amazing seeing your work, your determination, and your attention to detail. You’ve been such a presence that it’s hard to imagine our team standups without you."</p>
                 <div className="text-left w-full mt-auto">
-                  <div className="font-bold text-black uppercase tracking-widest text-xs">— Segun, Co-Founder</div>
-                  <div className="text-gray-600 text-xs mt-1 uppercase font-mono">Fintech Startup</div>
+                  <div className="font-bold text-black uppercase tracking-widest text-xs">— Feranmi</div>
+                  <div className="text-gray-600 text-xs mt-1 uppercase font-mono tracking-tighter">Software Engineer</div>
                 </div>
               </div>
 
-              {/* Testimonial 2 */}
+              {/* Testimonial 2 - Lekan */}
               <div className="bg-white border-4 border-black rounded-[20px] p-8 shadow-[6px_6px_0px_#10b981] flex flex-col justify-between hover:-translate-y-1 transition-transform">
-                <p className="text-lg font-bold font-mono text-gray-800 mb-6">"I’ve seen her take a messy, manual process and turn it into a bulletproof event-driven engine in weeks. She has this calm focus that makes the impossible feel like a Tuesday."</p>
+                <p className="text-lg font-bold font-mono text-gray-800 mb-6">"Your work on our codebase was truly impressive, showing distinct coding patterns and a highly technical style. Anyone who looks at our code today would comment on its elegance."</p>
                 <div className="text-left w-full mt-auto">
-                  <div className="font-bold text-black uppercase tracking-widest text-xs">— Amara, Lead Product Manager</div>
-                  <div className="text-gray-600 text-xs mt-1 uppercase font-mono">SaaS Platform</div>
+                  <div className="font-bold text-black uppercase tracking-widest text-xs">— Lekan</div>
+                  <div className="text-gray-600 text-xs mt-1 uppercase font-mono tracking-tighter">CTO, SaaS Product</div>
                 </div>
               </div>
 
-              {/* Testimonial 3 */}
+              {/* Testimonial 3 - Fortune */}
               <div className="bg-white border-4 border-black rounded-[20px] p-8 shadow-[6px_6px_0px_#facc15] flex flex-col justify-between hover:-translate-y-1 transition-transform">
-                <p className="text-lg font-bold font-mono text-gray-800 mb-6">"Being mentored by Busola changed how I think. She sees the greatness in you before you do, and she pushes you to own your work from the database to the UI."</p>
+                <p className="text-lg font-bold font-mono text-gray-800 mb-6">"You brought a level of seriousness and 'detailedness' to the entire team—across Android, web, and backend. You acted as a vital gatekeeper, ensuring that nothing 'shabby' was ever released."</p>
                 <div className="text-left w-full mt-auto">
-                  <div className="font-bold text-black uppercase tracking-widest text-xs">— David, Software Engineer</div>
-                  <div className="text-gray-600 text-xs mt-1 uppercase font-mono">Developer Team</div>
+                  <div className="font-bold text-black uppercase tracking-widest text-xs">— Fortune</div>
+                  <div className="text-gray-600 text-xs mt-1 uppercase font-mono tracking-tighter">Software Engineer / Colleague</div>
+                </div>
+              </div>
+
+              {/* Testimonial 4 - Emmanuel (Spanning check for balance) */}
+              <div className="bg-white border-4 border-black rounded-[20px] p-8 shadow-[6px_6px_0px_#f43f5e] flex flex-col justify-between hover:-translate-y-1 transition-transform">
+                <p className="text-lg font-bold font-mono text-gray-800 mb-6">"I am truly grateful for the way you helped me throughout my own journey. You have always been there to provide support and guidance over the years."</p>
+                <div className="text-left w-full mt-auto">
+                  <div className="font-bold text-black uppercase tracking-widest text-xs">— Emmanuel</div>
+                  <div className="text-gray-600 text-xs mt-1 uppercase font-mono tracking-tighter">Colleague / Mentee</div>
+                </div>
+              </div>
+
+              {/* Testimonial 5 - Dapo */}
+              <div className="bg-white border-4 border-black rounded-[20px] p-8 shadow-[6px_6px_0px_#f97316] flex flex-col justify-between hover:-translate-y-1 transition-transform">
+                <p className="text-lg font-bold font-mono text-gray-800 mb-6">"I really enjoyed learning from you. Out of all the colleagues I have worked with, your departure is the most deeply felt."</p>
+                <div className="text-left w-full mt-auto">
+                  <div className="font-bold text-black uppercase tracking-widest text-xs">— Dapo</div>
+                  <div className="text-gray-600 text-xs mt-1 uppercase font-mono tracking-tighter">Software Engineer / Colleague</div>
                 </div>
               </div>
             </div>
